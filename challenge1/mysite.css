@@ -1,0 +1,41 @@
+.text {
+  color: red;
+}
+
+header {
+  background-color: #EC715F;
+  height: 70px;
+  width: 100%;
+  /*display: flex;*/
+  /*justify-content: center;*/
+}
+
+.nav {
+  width: 1024px;
+  height: 70px;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  height: 70px;
+}
+
+li:first-child {
+  margin-right: auto;
+}
+
+.nav-item {
+  margin: 27px 30px 0 30px;
+  font-size: 16px;
+  color: #FAFAFA;
+}
+
+.nav-img {
+  margin-right: auto;
+}
+
+body {
+  background-color: black;
+}
