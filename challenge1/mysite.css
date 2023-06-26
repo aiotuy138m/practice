@@ -6,11 +6,12 @@ header {
   background-color: #EC715F;
   height: 70px;
   width: 100%;
-  /*display: flex;*/
-  /*justify-content: center;*/
+  text-align: center;
 }
 
 .nav {
+  display: inline-flex;
+  justify-content: center;
   width: 1024px;
   height: 70px;
 }
@@ -18,12 +19,11 @@ header {
 ul {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
   list-style: none;
   height: 70px;
-}
-
-li:first-child {
-  margin-right: auto;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-item {
