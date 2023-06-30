@@ -37,7 +37,7 @@ ul {
 }
 
 body {
-  background-color: black;
+  /*background-color: black;*/
 }
 
 main {
@@ -72,7 +72,7 @@ main {
   text-align: center;
 }
 
-.portfolio-texts {
+.texts {
   width: 920px;
   text-align: center;
 }
@@ -146,4 +146,29 @@ main {
   background-size: cover;
   background-position: center;
   margin: 0 0 90px 0;
+}
+
+.feature {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.strengths {
+  width: 980px;
+}
+
+.strength {
+  height: auto;
+  width: 320px;
+}
+
+.strength-title {
+  text-align: center;
+}
+
+.strength-text {
+  font-size: 20px;
+  color: #000000;
 }
