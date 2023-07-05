@@ -1,5 +1,5 @@
 .text {
-  color: red;
+  color: #000000;
 }
 
 header {
@@ -183,19 +183,26 @@ main {
   color: #000000;
 }
 
-.plofile {
+.profile {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #ECEFF1;
+}
+
+.profile-div {
   display: inline-flex;
   justify-content: center;
   flex-wrap: wrap;
-  height: 500px;
-  width: 100%;
-  background-color: #ECEFF1;
-  text-align: center;
-}
-
-.plofile-div {
   width: 1024px;
   color: #000000;
+}
+
+.profile-my {
+  display: flex;
+  justify-content: center;
+  width: 1024px;
+  margin: 0 0 90px 0;
 }
 
 .profile-icon {
@@ -206,12 +213,6 @@ main {
   object-fit: cover;
 }
 
-.profile-my {
-  display: flex;
-  justify-content: center;
-  width: 1024px;
-
-}
 
 .profile-left {
   display: flex;
@@ -220,4 +221,20 @@ main {
 
 .profile-left, .profile-right {
   width: 512px;
+}
+
+
+.profile-title:first-child {
+  margin: 0;
+}
+
+.profile-title {
+  font-size: 20px;
+  margin: 20px 0 0 0;
+}
+
+.profile-text {
+  font-size: 16px;
+  color: #000000;
+  margin: 5px 0 0 0;
 }
