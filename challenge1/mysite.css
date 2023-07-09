@@ -262,6 +262,7 @@ main {
 
 .contact-left, .contact-right {
   width: 400px;
+  text-align: center;
   margin: 0 0 90px 0;
 }
 
@@ -270,15 +271,14 @@ main {
   justify-content: center;
 }
 
-.contact-left {
- text-align: center;
+.left-text, .right-text {
+  display: inline-block;
+  text-align: left;
 }
 
 .contact-title {
   margin: 0;
   font-size: 20px;
-  display: inline-block;
-  text-align: left;
 }
 
 .contact-text {
@@ -286,4 +286,9 @@ main {
   font-size: 16px;
   display: inline-block;
   text-align: left;
+}
+
+.fa-brands {
+  margin: 5px 20px 0 0;
+  font-size: 50px;
 }
