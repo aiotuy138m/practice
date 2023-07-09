@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .text {
   color: #000000;
 }
@@ -81,7 +86,7 @@ main {
 }
 
 .bar {
-  margin-top: 8px;
+  margin: 8px auto 0 auto;
   border-color: #EC715F;
   background-color: #EC715F;
 }
@@ -291,4 +296,15 @@ main {
 .fa-brands {
   margin: 5px 20px 0 0;
   font-size: 50px;
+}
+
+footer {
+  height: 60px;
+  background-color: #EC715F;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 16px;
+  color: #FAFAFA;
 }
