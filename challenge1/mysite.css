@@ -318,3 +318,19 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media screen and (max-width:767px) {
+  header {
+    width: 100%;
+  }
+  
+  .nav {
+    width: 90%;
+  }
+  
+  main {
+    background-image: url("img/code.png");
+    background-size: contain;
+    text-align: center;
+  }
+}
