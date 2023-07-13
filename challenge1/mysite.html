@@ -10,21 +10,46 @@
   <body>
     <header>
       <nav class="nav">
-        <img src="img/logo.png" alt="ロゴ" height="70">
-        <ul>
-          <li class="nav-item">
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a href="#feature">Feature</a>
-          </li>
-          <li class="nav-item">
-            <a href="#profile">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
+        <div class="humberger">
+          <img src="img/logo.png" alt="ロゴ" height="70">
+          <div id="nav-drawer">
+            <input id="nav-input" type="checkbox" class="nav-unshown">
+            <label id="nav-open" for="nav-input"><span></span></label>
+            <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+            <div id="nav-content">
+              <ul>
+                <li class="nav-item">
+                  <a href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#feature">Feature</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="nav-list">
+           <ul>
+            <li class="nav-item">
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#feature">Feature</a>
+            </li>
+            <li class="nav-item">
+              <a href="#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
