@@ -468,5 +468,53 @@ footer {
     font-size: 40px;
   }
   
+  .title {
+    display: inline-block;
+  }
+  
+  .portfolio {
+    height: 100%;
+  }
+  
+  .portfolio-div {
+    width: 90%;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+ .portfolio-item:first-child {
+   display: none;
+  }
+
+.portfolio-item:nth-child(2) {
+  background-image: url("img/websuku.png");
+  background-size: cover;
+  background-position: center;
+  margin: auto auto 10px auto;
+}
+
+.portfolio-item:nth-child(3) {
+  display: none;
+}
+
+.portfolio-item:nth-child(4) {
+  background-image: url("img/webcamp.png");
+  background-size: cover;
+  background-position: center;
+  margin: auto auto 10px auto;
+}
+
+.portfolio-item:nth-child(5) {
+  display: none;
+}
+
+.portfolio-item:nth-child(6) {
+  background-image: url("img/webcamp-mother.png");
+  background-size: cover;
+  background-position: center;
+  margin: auto auto 90px auto;
+}
   
 }
