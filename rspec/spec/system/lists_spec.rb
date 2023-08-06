@@ -41,8 +41,8 @@ Rspec.describe List, "コントローラーのテスト" do
       end
       context '投稿処理のテスト' do
         it '投稿後のリダイレクト先は正しいか' do
-          fill_in 'list[title]', with: Facker::Lorem.characters(number:10) #number:5⇒10に修正
-          fill_in 'list[body]', with: Facker::Lorem.characters(number:30) #number:20⇒30に修正
+          fill_in 'list[title]', with: Faker::Lorem.characters(number:10) #number:5⇒10に修正
+          fill_in 'list[body]', with: Faker::Lorem.characters(number:30) #number:20⇒30に修正
           # fill_in 'list[image]'
           click_button '投稿'
           expect(page).to have_current_path list_path(List.last)
@@ -99,8 +99,8 @@ Rspec.describe List, "コントローラーのテスト" do
       end
       context '表示の確認' do
         it '編集前のタイトルと本文がフォームに表示（セット）されている' do
-          expect(page).to have_filed 'list[title]', whth: list.title
-          expect(page).to have_filed 'list[body]', whth: list.body
+          expect(page).to has_filed 'list[title]', whth: list.title
+          expect(page).to has_filed 'list[body]', whth: list.body
           # expect(page).to have_filed 'list[body]', whth: list.image
         end
         it '保存ボタンが表示される' do
@@ -109,8 +109,8 @@ Rspec.describe List, "コントローラーのテスト" do
       end
       context '更新処理に関するテスト' do
         it '更新後のリダイレクト先は正しいか' do
-          fill_in 'list[itle]', with: Facker::Lorem.characters(number:10) #number:5⇒10に修正
-          fill_in 'list[body]', with: Facker::Lorem.characters(number:30) #number:20⇒30に修正
+          fill_in 'list[itle]', with: Faker::Lorem.characters(number:10) #number:5⇒10に修正
+          fill_in 'list[body]', with: Faker::Lorem.characters(number:30) #number:20⇒30に修正
           # fill_in 'list[image]'
           click_button '保存'
           expect(page).to have_current_path list_path(list) #List.last⇒listに修正
