@@ -3,6 +3,10 @@ public class Chap5exercises3 {
     email("重要案件", "x＠ｘ", "案件確認次第連絡ください");
     email("y@y", "お元気ですか");
   }
+  // String address = "y@y";
+  // String text = "お元気ですか";
+  // email(address, text);
+  // でもよかった
   
   public static void email(String title, String address, String text) {
     System.out.println(address + "に、以下のメールを送信しました");

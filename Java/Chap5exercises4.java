@@ -2,9 +2,13 @@ public class Chap5exercises4 {
   public static double calcTriangleArea(double bottom, double height) {
     return (bottom * height) /2;
   }
+  // double ans = (bottom * height) /2;
+  // return ans;
+  // でもよかった
   public static double calcCircleArea(double radius) {
     return radius * radius * 3.14;
   }
+  // 上記に同じ
   public static void main(String[] args) {
     double triangle = calcTriangleArea(10.0, 5.0);
     double circle = calcCircleArea(5.0);
