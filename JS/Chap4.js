@@ -72,3 +72,58 @@ let data = [
 ];
 console.log(data[1]['name']);
 console.log(data[1]['bill']);
+
+//複数の関数やデータを組み合わせて使用
+// 1つのファイルに関数定義、データ、関数呼び出しを書くと、プログラムが長くなり、全体が把握しにくくなる
+// ⇒一般的にはファイルを複数に分割し、HTMLファイルに読み込んで利用する（Chap5でやる）
+
+//複数の関数を組み合わせる
+//メールを作る関数
+let createMail = (recv, bill) => {
+  let msg = `${recv}様
+PT企画の斎藤です。
+今月の請求額は${bill}円です。`;
+  console.log(msg);
+};
+//手数料を追加する関数
+let addChange = (bill) => {
+  return bill * 1.07;
+};
+//送付先データ
+let data = [
+  { name:'山本', bill:40000, crg:true},
+  { name:'吉田', bill:25000, crg:false}  
+];
+//メール作成実行
+for(let rec of data) {
+  let bill = rec['bill']
+  if(rec['crg']) {
+    bill = addChange(bill);
+  }
+  createMail(rec['name'],bill);
+}
+// ⇒変数dataに所属する要素を、新規作成した変数recに順次入れる間、以下を繰り返せ
+// ⇒{変数recのプロパティ「bill」を、新規作成した変数billに入れろ
+// 　もしも変数recのプロパティ「crg」が真なら以下を実行せよ
+// 　{変数billを指定して手数料を追加し、変数billを入れろ}
+// 　変数recのプロパティ「name」と変数billを指定してメールを作成しろ
+//  }
+
+
+// 実引数と仮引数の数があってなくてもJSはエラー吐かない。が、引数のデフォルト値は設定しないとundefined表記になる
+let createMail = (recv, bill = 0) => {
+  let msg = `${recv}様
+PT企画の斎藤です。
+今月の請求額は${bill}円です。`;
+  console.log(msg);
+};
+
+// 変数にはスコープがある。letとconstで作成した変数はブロックスコープといい、波括弧で囲まれたブロックの中で作成された場合にはそのブロック内でしか参照できない
+// メリット：プログラムを修正するとき、変数を作り直したり値を書き換えたりしても影響範囲が少ないこと。うっかり同じ名前の変数を作ってしまってもブロックが別であれば問題が発生しないこと
+if(ture) {
+  let caption = '谷口';
+}
+console.log(caption);
+// ⇒「Uncaught ReferenceError: caption is not defined」エラーになる
+// varで定義すれば関数スコープのため、同じ関数の中であればブロック外でも突き抜けて参照できる
+// ※varは変数の再宣言でエラーが発生せず、後で作成した方の変数のみが残るので、複数人で1つのプログラムを作っている時にある人が作成した変数が他の人に上書きされてしまう期限があるためあまり使用が推奨されていない
