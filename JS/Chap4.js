@@ -127,3 +127,55 @@ console.log(caption);
 // ⇒「Uncaught ReferenceError: caption is not defined」エラーになる
 // varで定義すれば関数スコープのため、同じ関数の中であればブロック外でも突き抜けて参照できる
 // ※varは変数の再宣言でエラーが発生せず、後で作成した方の変数のみが残るので、複数人で1つのプログラムを作っている時にある人が作成した変数が他の人に上書きされてしまう期限があるためあまり使用が推奨されていない
+// さらに可能ならletよりconstを使用する。letで作った変数には値を再代入できるが、constで作った変数は再代入が禁止されている。そのため、constはプログラムの中で書き換えできない変数であることを示すために使用される。
+// ただ、constで宣言した変数にオブジェクトを代入した後に、オブジェクトのプロパティなどを書き換えてもエラーは発生しない
+const data = {name: '山本'};
+data['name'] = '佐藤';
+console.log(data['name']);
+// ⇒佐藤
+// プログラム上、支障がない限りは基本的にconstで作るでよいらしい
+// 支障が出るのは繰り返しの中で更新していくカウンターとからしい
+
+// Uncaught SyntaxError: Unexpected indentifier 未捕捉の 文法エラー 予期しない 識別子
+// 識別子は変数や関数、引数などの名前を指す
+
+// 残余引数
+// ...をつけることで残余引数になり、余分な引数は無視されず配列に入れられる
+let callNames = (...names) => {
+  for(let name of names) {
+    console.log(name);
+  }
+};
+callNames('山本', '吉田', '佐藤', '鈴木');
+
+// 問1：createMail関数の文面を変更する
+let createMail = (recv) => {
+  console.log(recv + '様');
+  console.log('はじめまして。')
+};
+createMail('山本');
+
+let createMail = (recv) => {
+  let msg = `${recv}様
+はじめまして。`;
+  console.log(msg);
+};
+createMail('山本');
+
+// 問2：請求額がマイナスの時は0を返す
+let addChange = (bill) => {
+  if(bill <= 0) {
+    return bill = 0;
+  } else {
+    return bill * 1.07;
+  }
+};
+console.log(addChange(-1000));
+
+// ⇒return使用しているのでelse不要だった↓
+let addChange = (bill) => {
+  if(bill <= 0) {
+    return bill = 0;
+  }
+  return bill * 1.07;
+};
