@@ -1,9 +1,10 @@
 package calcapp.main; //パッケージ
+import calcapp.logics.CalcLogic; //インポート
 public class Calc {
   public static void main(String[] args) {
     int a = 10; int b = 2;
-    int total = calcapp.logics.CalcLogic.tasu(a, b); //ただtasuだけだと別のクラスで記載しているものだから引っ張って来れない完全限定クラス名または完全修飾クラス名（FQCN）で書く
-    int delta = calcapp.logics.CalcLogic.hiku(a, b);
+    int total = calcapp.logics.CalcLogic.tasu(a, b); //ただtasuだけだと別のクラスで記載しているものだから引っ張って来れない完全限定クラス名または完全修飾クラス名（FQCN）で書く.import文書いててもFQCNで書いても良い
+    int delta = CalcLogic.hiku(a, b); //calcapp.logics.CalcLogicがimport文未使用時のFQCN
     System.out.println("足すと" + total + "、引くと" + delta);
   }
 }
