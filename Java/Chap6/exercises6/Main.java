@@ -1,9 +1,9 @@
-import comment.Zenhan
+import comment.Zenhan;
 public class Main {
   public static void main(String[] args) throws Exception {
-    doWarusa();
-    doTogame();
-    callDeae();
-    showMondokoro();
+    Zenhan.doWarusa();
+    Zenhan.doTogame();
+    comment.Kouhan.callDeae();
+    comment.Kouhan.showMondokoro();
   }
 }
