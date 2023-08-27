@@ -11,3 +11,6 @@ public class Main {
 // 練習6-4
 // c:¥work¥ex64にMain.class
 // c:¥work¥ex64¥commentにZenhan.classとKouhan.class
+
+// 練習6-5
+// c:¥javaapp¥koumon
