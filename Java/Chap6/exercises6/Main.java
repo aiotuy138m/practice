@@ -7,3 +7,7 @@ public class Main {
     comment.Kouhan.showMondokoro();
   }
 }
+
+// 練習6-4
+// c:¥work¥ex64にMain.class
+// c:¥work¥ex64¥commentにZenhan.classとKouhan.class
