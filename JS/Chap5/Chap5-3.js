@@ -15,3 +15,10 @@ btn.addEventListener('click', () => {
   }
 });
 // if文を入れることで両方に入力のない場合は追加されない
+
+
+// Uncaught TypeError: Cannot read properties of null(reading 'innerText')
+// ⇒querySelectorメソッドが要素を見つけれられなかった場合にnullを返し、nullにはElementオブジェクトが持つプロパティやメソッドがないので処理エラーが起こる
+
+// Uncaught TypeError: ＊＊＊ is not a function
+// →型を間違えてメソッドを呼び出した場合に起きるエラー
