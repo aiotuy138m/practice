@@ -1,4 +1,5 @@
+const ipt = document.querySelector('input');
 const elem = document.querySelector('p');
-//⇒querySelectorでpタグのセレクタ要素を探して変数elemに入れている
-elem.innerText = 'JavaScriptで書く';
-//⇒innerTextはElementオブジェクトに入れた変数の中身を表す
+elem.innerText = ipt.value;
+// ⇒この記述だとクリックしても何も起きないし、入力フォーム下の「結果表示」の文字も消えてしまう
+// →読み込まれた瞬間に実行されるため、ipt.valueには何も入っていないため
