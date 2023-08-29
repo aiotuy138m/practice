@@ -6,8 +6,8 @@ btn.addEventListener('click', () => {
   const findtxt = fipt.value;
   const reptxt = repipt.value;
   let tagtxt = tarea.value;
-  tagtxt = tagtxt.replaceAll(findtxt, reptxt);
-  const newelem = document.createElement('p');
+  tagtxt = tagtxt.replaceAll(findtxt, reptxt); //変数tagtxt 入れろ 変数tagtxt すべて置換せよ 変数findtxtを検索して 変数reptxtに置換
+  const newelem = document.createElement('p'); //新規作成 変数newelem　入れろ Documentオブジェクト 要素を作成しろ 文字列「p」
   newelem.innerText = tagtxt;
-  document.body.appendChild(newelem);
+  document.body.appendChild(newelem); //Documentオブジェクト bodyプロパティ 末尾に子要素を追加 変数newelem
 });
