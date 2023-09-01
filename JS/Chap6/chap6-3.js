@@ -1,4 +1,4 @@
-const keyword = document.querySelector('inout');
+const keyword = document.querySelector('input');
 const btn = document.querySelector('button');
 const table = document.querySelector('table');
 const callApi = async () => {
