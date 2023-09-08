@@ -3,10 +3,10 @@
 n = ["+", "-", "*", "/", ""]
 puts n[3] #とりあえず配列登録は完了したこと確認
 
-num = [1000...9999]
-# each使う？for?
-num.each do |i|
-  ans = i + n + i + n + i + n + i #でもこれだとただ同じ数やるだけ？nも順番にはならない気がする
+num = [*1000...9999]
+ while true
+  ans = num.sample + n.sample.to_i + num.sample + n.sample.to_i + num.sample + n.sample.to_i + num.sample
   if num.to_s == ans.to_s.reverse
-    
+    puts ans
   end
+ end
