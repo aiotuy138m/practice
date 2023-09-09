@@ -6,7 +6,7 @@ puts n[3] #とりあえず配列登録は完了したこと確認
 num = [*1000...9999]
  while true
   ans = num.sample + n.sample.to_i + num.sample + n.sample.to_i + num.sample + n.sample.to_i + num.sample
-  if num.to_s == ans.to_s.reverse
+  if ans.to_s == ans.to_s.reverse #これだと4桁以上のやつしか
     puts ans
   end
  end
